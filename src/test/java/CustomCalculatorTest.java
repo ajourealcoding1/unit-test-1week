@@ -50,7 +50,7 @@ public class CustomCalculatorTest {
         customCalculator = new CustomCalculator();
         int result = customCalculator.divide(25,5);
 
-        assertEquals(result, 5);            //by KimDoHyun
+        assertEquals(result, 5);             //by KimDoHyun
         assertThat(result,is(5));           //by LeeDongHun
 
         System.out.println("result :: " + result);
