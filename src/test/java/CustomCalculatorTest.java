@@ -37,9 +37,9 @@ public class CustomCalculatorTest {
     @Test
     public void multiply() {
         customCalculator = new CustomCalculator();
-        int result = customCalculator.multiply(5,9);
+        int result = customCalculator.multiply(50,90);
 
-        assertThat(result,is(45));          //by LeeDongHun
+        assertThat(result,is(4500));          //by LeeDongHun
 
         System.out.println("result :: " + result);
     }
@@ -48,10 +48,10 @@ public class CustomCalculatorTest {
     @Test
     public void divide() {
         customCalculator = new CustomCalculator();
-        int result = customCalculator.divide(25,5);
+        int result = customCalculator.divide(250,5);
 
-        assertEquals(result, 5);             //by KimDoHyun
-        assertThat(result,is(5));           //by LeeDongHun
+        assertEquals(result, 50);             //by KimDoHyun
+        assertThat(result,is(50));           //by LeeDongHun
 
         System.out.println("result :: " + result);
     }
