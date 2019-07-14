@@ -48,7 +48,7 @@ public class UpperCaseCounterTest {
         int numberofUpperCaseCharactersInString = upperCaseCounter.getNumberOfUpperCaseCharactersInString(str);
 
         assertThat(numberofUpperCaseCharactersInString,greaterThanOrEqualTo(7));
-    }
+    } //by JooJaeLin
 
     //대소문자가 섞여 있을 때 정확히 카운팅 되는 지에 대한 테스트 코드 작성
     @Test
