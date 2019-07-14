@@ -107,6 +107,14 @@ public class ChampionTest {
         assertThat("TOP",equalToIgnoringCase(supportChamp.getPosition()));
     }   //by JooJaeLin
 
+    //공백을 무시하고 같은 문자열을 찾을 수 있는지 테스트 코드 작성
+    @Test
+    public void shouldSupportChampionPositionIsDarius(){
+        Champion supportChamp = new Champion("다리우스","Top");
+
+        assertThat("다리우스 ",equalToIgnoringWhiteSpace(supportChamp.getName()));
+    } //by JooJaeLin
+
 
     //hasProperty 활용하여 속성이 포함되어 있는지 테스트
     @Test
