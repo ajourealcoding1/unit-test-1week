@@ -43,7 +43,7 @@ public class ChampionTest {
     @Test
     public void notNullCheck() {
         String lck = "LCK";
-
+        assertThat(lck, not(nullValue()));          //Kang chanhyuk
         assertThat(lck, notNullValue());            //by LeeDongHun
     }
 
@@ -51,7 +51,7 @@ public class ChampionTest {
     @Test
     public void givenStringWhenNullIsCorrect() {
         String lck = null;
-
+        assertThat(lck, not(notNullValue()));       //Kang chanhyuk
         assertThat(lck, nullValue());               //by LeeDongHun
     }
 
@@ -65,7 +65,8 @@ public class ChampionTest {
         String endString = "point";
         assertThat(sampleString1, allOf(startsWith(startString), endsWith("Focus")));    // by KimDoHyun
         assertThat(sampleString2,anyOf(startsWith("flayer"),endsWith(endString)));      //by LeeDongHun
-
+        assertThat(sampleString1, containsString("Focus"));                     //Kang chanhyuk
+        assertThat(sampleString2, containsString("point"));                     //Kang chanhyuk
     }
 
     //부동소수점 범위 closeTo 테스트
@@ -84,11 +85,14 @@ public class ChampionTest {
 
     }
 
-    //객체 크기 검증 테스트 hasSize
+    //객체 크기 검증 테스트
     @Test
     public void shouldChampionCountFive() {
 
-        assertThat(championList, hasSize(5));                            //by LeeDongHun
+       assertThat(championList, hasSize(5));                            //by LeeDongHun
+       assertThat(championList.size(), greaterThanOrEqualTo(3));    //Kang chanhyuk
+       assertThat(championList.size(), lessThanOrEqualTo(10));      //Kang chanhyuk
+
     }
 
     //서폿 챔피언은 타릭이어야 한다라는 조건으로 테스트 코드 작성
